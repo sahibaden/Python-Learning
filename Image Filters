@@ -1,0 +1,17 @@
+from PIL import Image, ImageFilter
+
+# Section 17- 210
+img = Image.open('E:\PycharmProjects\Practice\CourseContent\Pokedex\wallpaper.jpg')
+
+print(img.size)
+
+img2 = img.resize((400,400)) """This command resizes the image, without keeping the aspect
+                                ratio, and returns a new value, which is stored in a new variable img2."""
+
+img2.save('E:\PycharmProjects\Practice\CourseContent\Pokedex\smallwallpaper.jpg')
+
+img.thumbnail((400,400)) """This command resizes the image, intelligently keeping ratio,
+                            but doesn't return any value. Hence it directly replaces old object with new."""
+
+
+img.save('E:\PycharmProjects\Practice\CourseContent\Pokedex\smallwallpaperwithratio.jpg')
